@@ -10,6 +10,11 @@ const PlaceOverview: React.FC<PlaceOverviewProps> = ({ place }) => {
         <Col style={{ padding: '10px', backgroundColor: '#fff' }} md={5}>
             <h1>{place?.placeName}</h1>
             <h2>{place?.placeAddress}</h2>
+            {
+                place?.currentlyOpen ?
+                    <h2 style={{ color: "#0F0" }}>Open</h2> :
+                    <h2 style={{ color: "#F00" }}>Closed</h2>
+            }
         </Col>
     );
 }
